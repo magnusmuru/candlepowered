@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  candlepowered:
+    container_name: candlepowered
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - '1433:1433'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password!322
+  
+  seq:
+    image: datalust/seq:latest
+    ports:
+      - 80:80
+      - 5341:5341
+    environment:
+      - ACCEPT_EULA=Y
+        
+networks:
+  host:
+    name: host
+    external: true
