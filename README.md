@@ -7,7 +7,7 @@ Swagger should open by default but it is located at https://localhost:7003.
 All commands need to be run inside CandlePowered project folder where `Program.cs` sits
 
 ## Docker
-Docker is supported by running `docker-compose -f docker-compose.yml up`. This can be flaky due to some kind of SQL Server bug in connecting to a host that is in the same computer.
+Docker is supported by running `docker-compose -f docker-compose.yml up`. This can be flaky due to some kind of SQL Server bug in connecting to a sql container that is in the same machine on Windows.
 
 ## Alternative
 Alternative is to install .NET 6 SDK and run just the SQL Server in Docker.
